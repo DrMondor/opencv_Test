@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include "stdafx.h"
 
 
@@ -11,15 +11,22 @@ using namespace cv;
 int main()
 
 {
+	int Threehold = 0;
+	int ucThre_New                                                         
+	Mat dstimage;
+	Mat picture = imread("_001a_0.png");
 
-	Mat picture = imread("006.png");
+	cvtColor(picture, dstimage, CV_RGB2GRAY);
 
-	imshow("²âÊÔ³ÌĞò", picture);
-	Mat element = getStructuringElement(MORPH_RECT, Size(15, 15));
+
+
+
+	imshow("æµ‹è¯•ç¨‹åº", dstimage);
+	/*Mat element = getStructuringElement(MORPH_RECT, Size(15, 15));
 	Mat dstimage;
 	erode(picture, dstimage, element);
-	imshow("¸¯Ê´²Ù×÷", dstimage);
-
+	imshow("è…èš€æ“ä½œ", dstimage);*/
+	/***è¿™æ˜¯ä¸€ä¸ªgithubåŒæ­¥æµ‹è¯•**/
 
 	waitKey(0);
 
